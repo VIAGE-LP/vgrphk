@@ -16,7 +16,7 @@ $(document).ready(function () {
         var formTop = $('#lp_form').position().top;
         var width = $(window).width();
 
-        if ((formTop <= (scrollPos + windowHeight / 2)) && (width <= 768)) {
+        if (formTop <= (scrollPos + windowHeight / 2)) {
             $("#fb-root").attr({
                 style: "display: none;"
             });
@@ -26,7 +26,7 @@ $(document).ready(function () {
             // $(".line_alert").attr({
             //     style: "display: block"
             // });
-        } else if ((formTop <= (scrollPos + windowHeight / 2)) && (width > 768)) {
+        } else if (formTop <= (scrollPos + windowHeight / 2)) {
             // $("#wh-widget-send-button").attr({
             //     style: "display: none ;width: 0px;height: 0px;"
             // });
