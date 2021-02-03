@@ -1,27 +1,25 @@
 // **************************************************
 // 接続先サーバー情報
-// - SETTING_ACTION_URL
-//  => 'http://sazae.littlesoft.jp:8080/ld';
-//  => 'http://localhost:8080/ld';
-//  => 'https://stgj8.acs-tpkg.com/ld';
-//  => 'https://stg.acs-tpkg.com/ld';
-//  => 'https://asp.acs-tpkg.com/ld';
-//  => 'https://ekkyo.acs-tpkg.com/ld';
 // **************************************************
+// const SETTING_ACTION_URL = 'http://sazae.littlesoft.jp:8080/ld';
+// const SETTING_ACTION_URL = 'http://localhost:8080/ld';
+// const SETTING_ACTION_URL = 'https://stgj8.acs-tpkg.com/ld';
+// const SETTING_ACTION_URL = 'https://stg.acs-tpkg.com/ld';
+// const SETTING_ACTION_URL = 'https://stg2.acs-tpkg.com/ld';
 const SETTING_ACTION_URL = 'https://asp.acs-tpkg.com/ld';
+// const SETTING_ACTION_URL = 'https://ekkyo.acs-tpkg.com/ld';
 
 // **************************************************
 // 接続先ホスト情報
-// - SETTING_ACTION_HOST_NAME
-//  => 'http://sazae.littlesoft.jp:8080';
-//  => 'http://localhost:8080';
-//  => 'https://stgj8.acs-tpkg.com';
-//  => 'https://stg.acs-tpkg.com';
-//  => 'https://asp.acs-tpkg.com';
-//  => 'https://asp-ch.acs-tpkg.com';
-//  => 'https://ekkyo.acs-tpkg.com';
 // **************************************************
+// const SETTING_ACTION_HOST_NAME = 'http://sazae.littlesoft.jp:8080';
+// const SETTING_ACTION_HOST_NAME = 'http://localhost:8080';
+// const SETTING_ACTION_HOST_NAME = 'https://stgj8.acs-tpkg.com';
+// const SETTING_ACTION_HOST_NAME = 'https://stg.acs-tpkg.com';
+// const SETTING_ACTION_HOST_NAME = 'https://stg2.acs-tpkg.com';
 const SETTING_ACTION_HOST_NAME = 'https://asp.acs-tpkg.com';
+// const SETTING_ACTION_HOST_NAME = 'https://asp-ch.acs-tpkg.com';
+// const SETTING_ACTION_HOST_NAME = 'https://ekkyo.acs-tpkg.com';
 
 // **************************************************
 // 利用言語情報
@@ -30,7 +28,23 @@ const SETTING_ACTION_HOST_NAME = 'https://asp.acs-tpkg.com';
 // - en : 英語
 // - hk : 香港語
 // **************************************************
-const SETTING_LANGUAGE = 'tw';
+// const SETTING_LANGUAGE = 'tw';
+// const SETTING_LANGUAGE = 'cn';
+// const SETTING_LANGUAGE = 'en';
+const SETTING_LANGUAGE = 'hk';
+
+// **************************************************
+// Whether show not selected text or not
+// 0: show, 1: not show
+// **************************************************
+// const SETTING_SHOW_NOTSELECT = "1";
+const SETTING_SHOW_NOTSELECT = "0";
+
+// **************************************************
+// 定期商品インデックス
+//  => 指定した位置にある商品を定期として扱う
+// **************************************************
+const SETTING_REGULAR_ITEM_INDEX = "";
 
 // **************************************************
 // ちょっと待って対象商品インデックス
@@ -65,7 +79,7 @@ const SETTING_CHANGE_PRODUCT_CYCLE  = '';
 // - SETTING_PROMOTION_CODE
 //  => 使用する販促コードを指定する
 // **************************************************
-const SETTING_PROMOTION_CODE = 'vgdm';
+const SETTING_PROMOTION_CODE = 'vgrphk';
 
 // **************************************************
 // 商品プルダウンに表示される商品を設定する
@@ -78,16 +92,14 @@ const SETTING_PROMOTION_CODE = 'vgdm';
 // - cycle
 //  => 定期配送サイクル
 // **************************************************
-const SETTING_PRODUCT_LIST = [
-    {
-        code: "",
-        name: "",
-        isRegular: "0",
-        cycle: "",
-        defaultVal: "",
-        visible: 1
-    }
-];
+const SETTING_PRODUCT_LIST = [{
+  code: '',
+  name: '',
+  isRegular: '0',
+  cycle: '',
+  defaultVal: '',
+  visible: 1
+}];
 
 // **************************************************
 // 初期値の設定
@@ -98,7 +110,6 @@ const SETTING_PRODUCT_LIST = [
 //  => 4 : Alipay
 //  => 5 : コンビニ決済
 //  => 6 : wechat
-//  => 10 : FPX (マレーシア：2C2P）
 // - SETTING_DEFAULT_RECEVING_METHOD(取貨方法)
 //  => 0 : 宅配
 //  => 1 : 超商取貨
@@ -131,11 +142,11 @@ const SETTING_DEFAULT_SEX             = '2';
 // - SETTING_ACCURACY_NUMBER
 //  => 変換先通貨の小数点桁数を指定する
 // **************************************************
-const SETTING_USER_ID         = 'nextage_lp2';
-const SETTING_ID              = '2019030001';
-const SETTING_QUANTITY        = '1';
-const SETTING_CONVERT_TYPE    = 'TWD';
-const SETTING_ACCURACY_NUMBER = '1';
+const SETTING_USER_ID = "lp_nxhk";
+const SETTING_ID = "2019090002";
+const SETTING_QUANTITY = "1";
+const SETTING_CONVERT_TYPE = "TWD";
+const SETTING_ACCURACY_NUMBER = "1";
 
 // **************************************************
 // 必須項目の設定
@@ -175,6 +186,9 @@ const SETTING_CONV_DEBUG       = false;
 //  => Ex: 2018/11/12
 // - SETTING_DEFAULT_END_SHIPPING_DATE (配送截止日期)
 //  => Ex: 2018/11/12
+// - SETTING_NONE_USE_DAY (不要配送的星期)
+//  => Ex: [6, 0, 1]
+//  => 星期六, 星期日, 星期一
 // **************************************************
 const SETTING_DEFAULT_START_SHIPPING_DATE = '';
 const SETTING_DEFAULT_END_SHIPPING_DATE   = '';
@@ -198,12 +212,12 @@ const SETTING_DEFAULT_END_SHIPPING_DATE   = '';
 // - SETTING_CHAT_ICONS
 //  => 使用するChatのimagesファイル(小)の設定を行う
 // **************************************************
-const SETTING_DOMAIN_URL    = 'https://viagebeautybra.com';
-const SETTING_JS_URL        = SETTING_DOMAIN_URL + '/CommonFiles/js';
-const SETTING_CSS_URL       = SETTING_DOMAIN_URL + '/CommonFiles/css';
-const SETTING_LANG_JSON_URL = SETTING_DOMAIN_URL + '/CommonFiles/language';
-const SETTING_IMAGE_URL     = SETTING_DOMAIN_URL + '/CommonFiles/images';
-const SETTING_HTML_CONV_URL = '/CommonFiles';
-const SETTING_JS_CHAT_URL   = '/CommonFiles';
-const SETTING_CHAT_ICONL    = '/bnr_chat.png';
-const SETTING_CHAT_ICONS    = '/sp_640x200.png';
+const SETTING_DOMAIN_URL    =  'https://viagebeautybra.com/hk';
+const SETTING_JS_URL        = SETTING_DOMAIN_URL + "/CommonFilesCrossing_TW2HK/js";
+const SETTING_CSS_URL       = SETTING_DOMAIN_URL + "/CommonFilesCrossing_TW2HK/css";
+const SETTING_LANG_JSON_URL = SETTING_DOMAIN_URL + "/CommonFilesCrossing_TW2HK/language";
+const SETTING_IMAGE_URL     = SETTING_DOMAIN_URL + "/CommonFilesCrossing_TW2HK/images";
+const SETTING_HTML_CONV_URL = "/CommonFilesCrossing_TW2HK";
+const SETTING_JS_CHAT_URL   = "/CommonFilesCrossing_TW2HK";
+const SETTING_CHAT_ICONL    = "/bnr_chat.png";
+const SETTING_CHAT_ICONS    = "/sp_640x200.png";
