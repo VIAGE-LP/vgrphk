@@ -225,3 +225,15 @@
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 14px;
 }
+
+.SP{
+    display: none;
+}
+@media screen and (max-width: 768px){
+    .SP{
+        display: block;
+    }
+    .PC{
+        display: none;
+    }
+}
