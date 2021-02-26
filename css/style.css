@@ -37,7 +37,7 @@
     margin: 0 auto;
     position: relative;
     width: 640px;
-    height: 463px;
+    height: 710px;
     background: url(../images/vgdm30/set05.jpg);
     background-position: center;
     background-size: cover;
@@ -64,15 +64,15 @@
 .teiki5 img {
     position: absolute;
     width: 276px;
-    bottom: 34px;
-    left: 298px;
+    bottom: 115px;
+    left: 312px;
 }
 
 .teiki4 {
     margin: 0 auto;
     position: relative;
     width: 640px;
-    height: 289px;
+    height: 369px;
     background: url(../images/vgdm30/set04.jpg);
     background-position: center;
     background-size: cover;
@@ -89,7 +89,7 @@
     margin: 0 auto;
     position: relative;
     width: 640px;
-    height: 235px;
+    height: 248px;
     background: url(../images/vgdm30/set03.jpg);
     background-position: center;
     background-size: cover;
